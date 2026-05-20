@@ -1,0 +1,631 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1f5eff, #5b8cff);
+  color: white;
+  border-radius: 28px;
+  padding: 44px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 40px rgba(31, 94, 255, 0.18);
+}
+
+.header-label {
+  margin: 0 0 12px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.header-desc {
+  margin: 18px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.add-btn {
+  border: none;
+  background: white;
+  color: #1f5eff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Summary */
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.summary-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.summary-card p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.summary-card span {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Search + Filter */
+.control-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 22px;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  margin-bottom: 18px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 58px;
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-size: 17px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #1f5eff;
+  box-shadow: 0 0 0 4px rgba(31, 94, 255, 0.1);
+}
+
+.filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #1f5eff;
+  color: #1f5eff;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #1f5eff;
+  color: white;
+  border-color: #1f5eff;
+  font-weight: 700;
+}
+
+/* List title */
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.list-title p {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.list-title h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Job card */
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.job-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 24px;
+  transition: 0.2s;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.status-badge {
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #eef2ff;
+  color: #1f5eff;
+}
+
+.status-badge.지원-전 {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.status-badge.지원-완료 {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.status-badge.서류-합격 {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.status-badge.면접-예정 {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.status-badge.마감-임박 {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.status-badge.최종-합격 {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.불합격 {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.deadline {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.job-card h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+
+.position {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.location {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tech-list span {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.memo {
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .summary-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .job-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 28px 20px 60px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 24px;
+    padding: 34px 28px;
+  }
+
+  .header h1 {
+    font-size: 42px;
+  }
+
+  .summary-section {
+    grid-template-columns: 1fr;
+  }
+
+  .job-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add job form */
+.add-job-form {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 26px;
+  margin-bottom: 34px;
+  margin-top: 56px;
+}
+
+.form-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.form-title-row p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.form-title-row h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.form-grid input,
+.form-grid select,
+.add-job-form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.form-grid input,
+.form-grid select {
+  height: 52px;
+}
+
+.add-job-form textarea {
+  height: 100px;
+  padding-top: 16px;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.add-job-form textarea:focus {
+  border-color: #1f5eff;
+  box-shadow: 0 0 0 4px rgba(31, 94, 255, 0.1);
+}
+
+.submit-btn {
+  border: none;
+  background: #1f5eff;
+  color: white;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #174cff;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.status-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-change-select {
+  height: 32px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 0 10px;
+  background: white;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  outline: none;
+}
+
+.status-change-select:focus {
+  border-color: #1f5eff;
+  box-shadow: 0 0 0 3px rgba(31, 94, 255, 0.12);
+}
+
+.delete-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* 상태 뱃지 기본 */
+.status-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* 상태 select 기본 */
+.status-change-select {
+  height: 34px;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  background: white;
+}
+
+/* 지원 전 - 회색 */
+.status-badge.지원-전 {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.status-change-select.지원-전 {
+  border: 1px solid #d1d5db;
+  color: #6b7280;
+}
+
+/* 지원 완료 - 파랑 */
+.status-badge.지원-완료 {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.status-change-select.지원-완료 {
+  border: 1px solid #93c5fd;
+  color: #2563eb;
+}
+
+/* 서류 합격 - 초록 */
+.status-badge.서류-합격 {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status-change-select.서류-합격 {
+  border: 1px solid #86efac;
+  color: #16a34a;
+}
+
+/* 면접 예정 - 보라 */
+.status-badge.면접-예정 {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.status-change-select.면접-예정 {
+  border: 1px solid #d8b4fe;
+  color: #9333ea;
+}
+
+/* 마감 임박 - 주황 */
+.status-badge.마감-임박 {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.status-change-select.마감-임박 {
+  border: 1px solid #fdba74;
+  color: #ea580c;
+}
+
+/* 최종 합격 - 청록 */
+.status-badge.최종-합격 {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.status-change-select.최종-합격 {
+  border: 1px solid #5eead4;
+  color: #0f766e;
+}
+
+/* 불합격 - 빨강 */
+.status-badge.불합격 {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-change-select.불합격 {
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+}
+
+/* 필터 버튼 기본 */
+.filter-btn {
+  border: 1px solid #d9dee8;
+  background: white;
+  color: #4b5563;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 전체 */
+.filter-btn.status-전체.active {
+  background: #1f5eff;
+  color: white;
+  border-color: #1f5eff;
+}
+
+/* 지원 전 */
+.filter-btn.status-지원-전.active {
+  background: #6b7280;
+  color: white;
+  border-color: #6b7280;
+}
+
+/* 지원 완료 */
+.filter-btn.status-지원-완료.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* 서류 합격 */
+.filter-btn.status-서류-합격.active {
+  background: #16a34a;
+  color: white;
+  border-color: #16a34a;
+}
+
+/* 면접 예정 */
+.filter-btn.status-면접-예정.active {
+  background: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+/* 마감 임박 */
+.filter-btn.status-마감-임박.active {
+  background: #f97316;
+  color: white;
+  border-color: #f97316;
+}
+
+/* 최종 합격 */
+.filter-btn.status-최종-합격.active {
+  background: #059669;
+  color: white;
+  border-color: #059669;
+}
+
+/* 불합격 */
+.filter-btn.status-불합격.active {
+  background: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
