@@ -99,12 +99,7 @@ const handleDeleteJob = (jobId) => {
         />
       </section>
 
-      <section className="list-title">
-        <div>
-          <p>지원 회사 목록</p>
-          <h2>{filteredJobs.length}개의 공고가 있습니다</h2>
-        </div>
-      </section>
+      
 
       <section className="job-list">
         {filteredJobs.map((job) => (

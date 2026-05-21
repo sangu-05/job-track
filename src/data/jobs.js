@@ -7,7 +7,11 @@ const jobs = [
     deadline: "2026-06-10",
     status: "지원 전",
     tech: ["React", "JavaScript", "CSS"],
-    memo: "포트폴리오 링크 정리 필요",
+    requirements: [
+        "React 기반 UI 개발 경험",
+        "HTML, CSS, JavaScript 기본 이해",
+        "사용자 경험을 고려한 화면 구현 능력",
+        ],
   },
   {
     id: 2,
@@ -17,7 +21,12 @@ const jobs = [
     deadline: "2026-06-05",
     status: "지원 완료",
     tech: ["React", "TypeScript", "Git"],
-    memo: "자기소개서 제출 완료",
+    requirements: [
+      "React 기반 컴포넌트 개발 경험",
+      "TypeScript 기본 사용 경험",
+      "Git을 활용한 버전 관리 경험",
+      "서비스 화면 개선과 유지보수에 관심이 있는 분",
+    ],
   },
   {
     id: 3,
@@ -27,7 +36,12 @@ const jobs = [
     deadline: "2026-05-30",
     status: "면접 예정",
     tech: ["React", "Next.js", "TypeScript"],
-    memo: "기술 면접 질문 준비 필요",
+    requirements: [
+      "React 또는 Next.js 기반 프로젝트 경험",
+      "TypeScript를 활용한 개발 경험",
+      "재사용 가능한 컴포넌트 설계에 대한 이해",
+      "빠르게 변화하는 서비스 환경에 적응할 수 있는 분",
+    ],
   },
   {
     id: 4,
@@ -37,7 +51,12 @@ const jobs = [
     deadline: "2026-06-18",
     status: "지원 전",
     tech: ["JavaScript", "React", "HTML/CSS"],
-    memo: "서비스 분석 후 지원 예정",
+     requirements: [
+      "HTML, CSS, JavaScript를 활용한 화면 구현 능력",
+      "React를 이용한 개인 또는 팀 프로젝트 경험",
+      "반응형 웹 페이지 제작 경험",
+      "사용자 피드백을 반영해 UI를 개선해본 경험",
+    ],
   },
   {
     id: 5,
@@ -47,7 +66,12 @@ const jobs = [
     deadline: "2026-06-01",
     status: "서류 합격",
     tech: ["React", "Vue", "Git"],
-    memo: "과제 전형 준비 필요",
+    requirements: [
+      "React 또는 Vue를 활용한 웹 개발 경험",
+      "컴포넌트 기반 화면 구성에 대한 이해",
+      "REST API 데이터 연동 경험",
+      "팀원과 원활하게 소통하며 개발할 수 있는 분",
+    ],
   },
   {
     id: 6,
@@ -57,7 +81,12 @@ const jobs = [
     deadline: "2026-05-25",
     status: "마감 임박",
     tech: ["React", "JavaScript", "UI/UX"],
-    memo: "오늘 안에 지원서 제출하기",
+    requirements: [
+      "React 기반 웹 서비스 개발 경험",
+      "JavaScript 동작 원리에 대한 기본 이해",
+      "UI/UX를 고려한 화면 구현 능력",
+      "문제를 발견하고 개선하려는 태도를 가진 분",
+    ],
   },
 ];
 
