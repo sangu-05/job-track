@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f6f7fb;
+  background: #f6fbf7;
   color: #111827;
 }
 
@@ -23,7 +23,7 @@ input {
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, #1f5eff, #5b8cff);
+  background: linear-gradient(135deg, #6fb58f, #4f9f7a);
   color: white;
   border-radius: 28px;
   padding: 44px 48px;
@@ -56,7 +56,7 @@ input {
 .add-btn {
   border: none;
   background: white;
-  color: #1f5eff;
+  color: #3f8b68;
   padding: 14px 20px;
   border-radius: 999px;
   font-size: 15px;
@@ -396,7 +396,7 @@ input {
 
 .submit-btn {
   border: none;
-  background: #1f5eff;
+  background: linear-gradient(135deg, #6fb58f, #4f9f7a);
   color: white;
   height: 52px;
   padding: 0 24px;

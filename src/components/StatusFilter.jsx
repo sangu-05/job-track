@@ -16,8 +16,8 @@ function StatusFilter({ selectedStatus, setSelectedStatus }) {
         <button
           key={status}
           className={`filter-btn status-${status.replaceAll(" ", "-")} ${
-  selectedStatus === status ? "active" : ""
-}`}
+            selectedStatus === status ? "active" : ""
+            }`}
           onClick={() => setSelectedStatus(status)}
         >
           {status}
