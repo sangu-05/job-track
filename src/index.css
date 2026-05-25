@@ -142,8 +142,8 @@ input {
 }
 
 .filter-btn:hover {
-  border-color: #1f5eff;
-  color: #1f5eff;
+  
+  
   transform: translateY(-2px);
 }
 
@@ -576,9 +576,9 @@ input {
 
 /* 전체 */
 .filter-btn.status-전체.active {
-  background: #1f5eff;
+  background: linear-gradient(135deg, #6fb58f, #4f9f7a);
   color: white;
-  border-color: #1f5eff;
+  border-color: #4f9f7a;
 }
 
 /* 지원 전 */
@@ -635,8 +635,6 @@ input {
   gap: 12px;
   margin-top: 20px;
 }
-
-
 
 .status-change-select {
   width: 180px;
